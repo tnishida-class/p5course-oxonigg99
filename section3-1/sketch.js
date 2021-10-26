@@ -1,6 +1,7 @@
 // テキスト「リサイズするプログラムを作る」
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);//キャンバスの大きさをウィンドウの大きさと同じにする
+
 }
 
 function windowResized(){
