@@ -4,13 +4,39 @@ let cycle;
 
 function setup(){
   createCanvas(200, 200);
-  count = 0;
+  count = 0;//何回したか数えているもの。0スタートで下にどうやって変化していくか入れる
   cycle = 100;
 }
 
 function draw(){
   background(160, 192, 255);
-  count = (count + 1) % cycle;
+  count = (count + 1) % cycle;//12345・・て変数が順に変わる。周期的な動き、おきまりcycle=周期の長さ
   // BLANK[1]
-  ellipse(width / 2, height / 2, size);
+  let size= count;
+//  if(count>0 && count<50){
+//  ellipse(width / 2, height / 2, size^2);
+  // fill(255,0,0);//
+// }
+
+//  if(count=50){
+  //ellipse(width / 2, height / 2, size*2);
+  // fill(255,0,0);//
+  //}
+
+  //if(count>50 && count<100){
+//  ellipse(width / 2, height / 2, (cycle-size)^2);
+  // fill(255,0,0);//
+//  }
+  if(count>0 && count<45){
+  ellipse(width / 2, height / 2, size^2);
+   fill(255,0,0);//
+ }
+
+  if(count>45 && count <55){
+  ellipse(width / 2, height / 2, (size)^2);
+}
+if(count>55 && count <100){
+ ellipse(width / 2, height / 2, (cycle-size)^2);
+
+}
 }
