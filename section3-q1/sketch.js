@@ -33,10 +33,11 @@ function draw(){
  }
 
   if(count>45 && count <55){
-  ellipse(width / 2, height / 2, (size)^2);
+  ellipse(width / 2, height / 2, 2*(size)^2);
+     fill(255,0,0);//
 }
 if(count>55 && count <100){
  ellipse(width / 2, height / 2, (cycle-size)^2);
-
+   fill(255,0,0);//
 }
 }
