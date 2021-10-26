@@ -38,4 +38,7 @@ function drawArcs(c1, c2, r) {
     fill(i % 2 == 0 ? c1 : c2);
     arc(cx, cy, r, r, start, stop, PIE);
   }
+//私がいじったところ
+
+
 }
