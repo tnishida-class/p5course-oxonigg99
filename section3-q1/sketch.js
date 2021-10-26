@@ -28,7 +28,7 @@ function draw(){
   // fill(255,0,0);//
 //  }
   if(count>0 && count<=40){
-  ellipse(width / 2, height / 2, size/2);
+  ellipse(width / 2, height / 2, size/2+10);
    fill(255,0,0);//
  }
 
@@ -41,7 +41,7 @@ ellipse(width / 2, height / 2, 3*(cycle-size)^2);
    fill(255,0,0);//
 }
 if(count>60 && count <=100){
- ellipse(width / 2, height / 2, (cycle-size)/2);
+ ellipse(width / 2, height / 2, (cycle-size)/2+10);
    fill(255,0,0);//
 }
 }
