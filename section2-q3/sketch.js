@@ -21,14 +21,17 @@ function setup() {
 }
 
 function drawCircle(c, r){
+  const cx = width / 2;
+  const cy = height / 2;
+
   fill(c);
   ellipse(cx, cy, r, r);
 }
 
 function drawArcs(c1, c2, r) {
  const cx = width / 2;
- const cy = heght / 2;
-   
+ const cy = height / 2;
+
   for (let i = 0; i < 20; i++) {
     let start = TWO_PI / 20 * i;
     let stop = TWO_PI / 20 * (i + 1);
