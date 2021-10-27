@@ -14,13 +14,17 @@ function setup() {
   const cy = height / 2;
   const maxR = min(width, height); // 大きさは幅と高さのうち小さい方
 
+
   drawCircle(black, maxR);
-  drawArcs(green, red, maxR * 0.8);
-  // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
-  drawCircle(red, maxR * 0.05);
+  drawArcs(green, red, maxR * 0.8);//大きい円の緑赤
+  drawArcs(cream,black,maxR*0.75);
+  drawArcs(green, red, maxR * 0.5);
+  drawArcs(cream,black,maxR*0.45);
+  drawCircle(green, maxR * 0.1);// BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
+  drawCircle(red, maxR * 0.05);//一番中心の小さい赤円
 }
 
-function drawCircle(c, r){
+function drawCircle(c, r){//一番中心の小さい赤円
   const cx = width / 2;
   const cy = height / 2;
 
@@ -33,6 +37,8 @@ function drawArcs(c1, c2, r) {
  const cy = height / 2;
 
   for (let i = 0; i < 20; i++) {
+// for(let j = 0; j < ; j)
+
     let start = TWO_PI / 20 * i;
     let stop = TWO_PI / 20 * (i + 1);
     fill(i % 2 == 0 ? c1 : c2);
