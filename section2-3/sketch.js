@@ -4,10 +4,19 @@
 function setup(){
   createCanvas(100, 100);
   for(let i = 0; i < 10; i++){
-    for(let j = 0; j < 10; j++){
-      fill(j % 2 == 0 ? 255 : 0); // ここを変えます
+  for(let j = 0; j < 10; j++){
+  if(j % 2 == 0){
+    stroke(255,0,0);
+    }
+  else if (i % 2== 0){
+    stroke(0,0,255);
+  }
+  else{
+    stroke(0,0,0);
+  }
+       // ここを変えます
       console.log(i, j);
       rect(i * 10, j * 10, 5, 5);
     }
   }
-}
+     }
