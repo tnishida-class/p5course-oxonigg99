@@ -7,8 +7,8 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-//  vx = 2;
-//  vy = 2;
+  vx = 2;
+  vy = 2;
 }
 
 function draw(){
@@ -24,16 +24,18 @@ function draw(){
   if(y < 0 || y > height){ vy = -1 * vy; }
   y = constrain(y, 0, height);
 
+if(keyIsDown(LEFT_ARROW)){x-=5;}
+if(keyIsDown(RIGHT_ARROW)){x+=5;}
+if(keyIsDown(" ".charCodeAt(0))){y-=15}
 
-
-  // 端の処理パターン (1) 反対側から出てくる
-  // if(x > width){ x = 0; }
-  // else if(x < 0){ x = width; }
-  // if(y > height){ y = 0; }
-  // if(y < 0){ y = height; }
+   //端の処理パターン (1) 反対側から出てくる
+   if(x > width){ x = 0; }
+   else if(x < 0){ x = width; }
+   if(y > height){ y = 0; }
+   if(y < 0){ y = height; }
 
 　// 端の処理パターン (2) 跳ね返る
-//  if(x < 0 || x > width){ vx = -1 * vx; }
+  //if(x < 0 || x > width){ vx = -1 * vx; }
   //if(y < 0 || y > height){ vy = -1 * vy; }
   //x = constrain(x, 0, width);
   //y = constrain(y, 0, height);
