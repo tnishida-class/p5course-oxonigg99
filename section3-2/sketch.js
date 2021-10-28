@@ -26,7 +26,7 @@ function draw(){
 
 if(keyIsDown(LEFT_ARROW)){x-=5;}
 if(keyIsDown(RIGHT_ARROW)){x+=5;}
-if(keyIsDown(" ".charCodeAt(0))){y-=15}
+if(keyIsDown(" ".charCodeAt(0))){vy-=g*1.4}
 
    //端の処理パターン (1) 反対側から出てくる
    if(x > width){ x = 0; }
