@@ -33,9 +33,9 @@ function setup(){
   }
 
   smallest = 100;
-  let y =scores[i]
-  for(let i = 0; i < scores.length; i++){
 
+  for(let i = 0; i < scores.length; i++){
+  let y =scores[i]
     if(y>=scores[i]){
     smallest=scores[i];
     }
@@ -52,8 +52,8 @@ function setup(){
   for(let i = 0; i < scores.length; i++){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
-   if(x==largest){fill(0,255,255)}
-   if(y==smallest){fill(0,0,255)}
+   if(scores[i]==largest){fill(255,0,0)}
+   if(scores[i]==smallest){fill(0,0,255)}
 
 
     // BLANK[4] ヒント: 条件分岐を使って色を変更します
