@@ -15,8 +15,6 @@
 
   function draw(){
     background(160, 192, 255);
-  //  x+=vx;
-  //  y+=vy;
 
 
     if(keyIsDown(" ".charCodeAt(0))){
