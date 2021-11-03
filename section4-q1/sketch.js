@@ -25,16 +25,14 @@ function setup(){
       px=(i-1)*width/10
       py=scores[i-1]*height/100
       line(px,py,i*dx,scores[i]*height/100);
-      strokeWeight(3);
+      strokeWeight(3);//点だけ太くするやり方がわかりません
       point(px, py);
-
     }
+
     if(i==0){
-
       line(i*dx,scores[i]*height/100,(i+1)*dx,scores[i+1]*height/100)
-     strokeWeight(3)
+      strokeWeight(3)
       point(i*dx,scores[i]*height/100)
-
     }
     // BLANK[1]
   }
