@@ -21,19 +21,26 @@ function setup(){
   let px, py; // 線を引くために一つ前の点を覚えておく変数
 
   for(let i = 0; i < scores.length; i++){
-    if(i>0){
-      px=(i-1)*width/10
-      py=scores[i-1]*height/100
-      line(px,py,i*dx,scores[i]*height/100);
-      strokeWeight(3);//点だけ太くするやり方がわかりません
-      point(px, py);
+  //  if(i>0){
+  //    px=(i-1)*width/scores.length
+  //    py=scores[i-1]*height/100
+  //    strokeWeight(2)
+  //    line(px+dx/2,py,i*dx+dx/2,scores[i]*height/100);
+  //    strokeWeight(10);//点だけ太くするやり方がわかりません:strokeWeight → line → strokeWeight → point とすればOKです
+  //    point(px+dx/2, py);
+  //  }
+    if(i>=0){
+      px=i*width/scores.length
+      py=scores[i]*height/100
+      strokeWeight(2)
+      line(px+dx/2,py,(i+1)*dx+dx/2,scores[i+1]*height/100);
+      strokeWeight(10);//点だけ太くするやり方がわかりません:strokeWeight → line → strokeWeight → point とすればOKです
+      point(px+dx/2, py);
     }
-
-    if(i==0){
-      line(i*dx,scores[i]*height/100,(i+1)*dx,scores[i+1]*height/100)
-      strokeWeight(3)
-      point(i*dx,scores[i]*height/100)
-    }
+//    if(i==scores.length-1){
+//      strokeWeight(10)
+//     point((i+1)*dx+dx/2,scores[i+1]*height/100)
+   //}
     // BLANK[1]
   }
 }
