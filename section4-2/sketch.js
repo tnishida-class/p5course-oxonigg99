@@ -9,6 +9,8 @@ let x,y;
 function setup(){
   createCanvas(windowWidth, windowHeight);
   balls = [];
+  x=random(0,width)
+  y=random(0,height)
 }
 
 function draw(){
@@ -18,14 +20,12 @@ function draw(){
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
-  　b.size=random(1,40);
+  //　b.size=random(1,40);
   }
 }
 　 count = (count+1) % cycle;
   if(count>0 && count<20){
-    x=random(0,width)
-    y=random(0,height)
-    ellipse(x,y,size)
+    ellipse(x,y,)
   }
 
 
@@ -34,8 +34,9 @@ function draw(){
 function mouseDragged(){
   const dx = mouseX - pmouseX;
   const dy = mouseY - pmouseY;
+ const r = random(10,30)
   if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
+    const b = { x: mouseX, y: mouseY, size:r, vx: dx, vy: dy };
     balls.push(b);
   }
 }
