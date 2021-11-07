@@ -40,12 +40,13 @@ function setup(){
   }  // BLANK[3]　ヒント：最小値とだいたい同じ
 
 
+
+
   // ここから棒グラフを描いていきます。まずは背景に横線をn本引く
   const n = 10;
   for(let i = 0; i < n; i++){ line(0, height * i / n, width, height * i / n); }
 
   noStroke();
-
   for(let i = 0; i < scores.length; i++){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
@@ -56,6 +57,9 @@ function setup(){
     rect(i * dx + 2, height - h, dx - 4, h);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
+
+  stroke(0,255,0);
+  line(0,height-average*height / 100, width, height-average*height / 100)
 
   // BLANK[5] 平均点の線を引きます
 }

@@ -4,13 +4,15 @@
 
 let balls;
 let count;
+let cycle;
 let x,y;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   balls = [];
-  x=random(0,width)
-  y=random(0,height)
+  count = 0;
+  cycle = 300;
+
 }
 
 function draw(){
@@ -20,21 +22,20 @@ function draw(){
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
-  //　b.size=random(1,40);
+  }
+
+
+  count = (count+1) % cycle;
+  if(count>100 && count<110){
+    const b = { x:width/2, y:height/2 , size:random(10,30), vx:random(-2,2), vy:random(-2,2)};
+    balls.push(b);
   }
 }
-　 count = (count+1) % cycle;
-  if(count>0 && count<20){
-    ellipse(x,y,)
-  }
-
-
-
 
 function mouseDragged(){
   const dx = mouseX - pmouseX;
   const dy = mouseY - pmouseY;
- const r = random(10,30)
+  const r = random(10,30)
   if(mag(dx, dy) > 5){
     const b = { x: mouseX, y: mouseY, size:r, vx: dx, vy: dy };
     balls.push(b);
