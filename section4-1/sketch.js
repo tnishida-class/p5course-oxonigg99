@@ -19,7 +19,7 @@ function setup(){
 
   // ここから平均・最大・最小を求めます
   let average, largest, smallest;
-  average=sum/scores.lengs  // BLANK[1]　平均値（ヒント average = 合計 / 配列の長さ）
+  average=sum/scores.lengs;  // BLANK[1]　平均値（ヒント average = 合計 / 配列の長さ）
   console.log(average)
 
   largest = 0;//最初の比較バトルに負けなければならない
