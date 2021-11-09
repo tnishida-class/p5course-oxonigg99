@@ -19,7 +19,7 @@ function setup(){
 
   // ここから平均・最大・最小を求めます
   let average, largest, smallest;
-  average=sum/scores.lengs;  // BLANK[1]　平均値（ヒント average = 合計 / 配列の長さ）
+  average = sum/scores.length;  // BLANK[1]　平均値（ヒント average = 合計 / 配列の長さ）
   console.log(average)
 
   largest = 0;//最初の比較バトルに負けなければならない
@@ -46,7 +46,7 @@ function setup(){
   const n = 10;
   for(let i = 0; i < n; i++){ line(0, height * i / n, width, height * i / n); }
 
-  noStroke();
+ noStroke();
   for(let i = 0; i < scores.length; i++){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
@@ -59,7 +59,7 @@ function setup(){
   }
 
   stroke(0,255,0);
-  line(0,height-average*height / 100, width, height-average*height / 100)
+  line(0,height*(100-average)/100, width, height *(100-average)/100)
 
   // BLANK[5] 平均点の線を引きます
 }
