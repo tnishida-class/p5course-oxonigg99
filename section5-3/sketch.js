@@ -22,7 +22,7 @@ function calendar(y, m){
 }
 
 function isLeapYear(y){
-  return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);
+  return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);//１:４で割り切れる。２：１００で割り切れなくて、４００で割り切れる
 }
 
 function daysInYear(y){
