@@ -21,7 +21,7 @@ function setup(){
   let px, py; // 線を引くために一つ前の点を覚えておく変数
 
   for(let i = 0; i < scores.length; i++){
-  //  if(i>0){
+  //  if(i>0){//なんかちがった
   //    px=(i-1)*width/scores.length
   //    py=scores[i-1]*height/100
   //    strokeWeight(2)
