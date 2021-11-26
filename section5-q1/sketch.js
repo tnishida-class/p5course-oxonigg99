@@ -4,7 +4,7 @@
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon("I love keyakizaka46",100,50,0);
+  balloon("I love keyakizaka46",100,50,0);//テキスト、x,y,カラーを指定できる
 }
 
 function balloon(t,x,y,c){

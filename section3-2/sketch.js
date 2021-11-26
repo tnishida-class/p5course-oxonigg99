@@ -16,15 +16,15 @@ function draw(){
   ellipse(x, y, 30);
 
 
-//  x += vx;
+  x +=0 ;
   y += vy;
  //vy += g;  //速度＝速度の変化量
   // 重力（コメント機能でオンオフ切り替えて実行してみましょう）
   vy = constrain(vy + g, -vyMax, vyMax); // 速度が大きくなりすぎないように調整 マリオは重力に引っ張られるのはある
 //  if(y < 0 || y > height){ vy = 0; }
 //  y = constrain(y, 0, height);
-if(keyIsDown(LEFT_ARROW)){vx-=5;}
-if(keyIsDown(RIGHT_ARROW)){vx+=5;}
+if(keyIsDown(LEFT_ARROW)){x-=5;}
+if(keyIsDown(RIGHT_ARROW)){x+=5;}
 if(y>=height - 10 &&keyIsDown(" ".charCodeAt(0))){vy=-20}//地面にいるときしか飛べない
 
 
