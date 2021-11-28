@@ -10,10 +10,6 @@ function preload() {
   img = loadImage('mariolast.png');
 }
 
-
-
-
-
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x =width*4/5;
@@ -97,7 +93,7 @@ function draw(){
   h=marioY+120;
   vw=2;
   vh=2;
-  if(dist(w,h, x, y) < 100){count = (count + 9) % cycle;}
+  if(dist(marioX,marioY, x, y) <200){count = (count + 10) % cycle;}
   else{count = (count+1) % cycle;}
   stroke(0);
   fill(255,0,0);
@@ -126,7 +122,7 @@ function keyPressed(){
 }
 
 function mousePressed(){
-  grabbed = dist(mouseX, mouseY, x, y) < 30; // distは２点の距離を求める関数
+  grabbed = dist(mouseX, mouseY, x, y) < 1000; // distは２点の距離を求める関数
 }
 
 function mouseDragged(){
@@ -139,38 +135,7 @@ function mouseDragged(){
 function mouseReleased(){
   if(grabbed){
     grabbed = false;
-    vx =(mouseX - pmouseX)/2;
-    vy =(mouseY - pmouseY)/2;
+    vx =(mouseX - pmouseX)*2;
+    vy =(mouseY - pmouseY)*2;
   }
 }
-
-
-
-//回転入れようか迷って
-//let angle;
-//let x1=30;
-//let y1=30;
-//let heartR=0.2
-//function setup(){
-//  createCanvas(1000, 1000);
-//  background(200);
-//   angle = 0;
-// //heart(width/2,height/2,1)
-//}
-
-//function heart(x1,y1,heartR){
-
-//function draw(){
-//     background(200);
-//    rectMode(CENTER);
-//    translate(100, 200);
-//  rotate(angle);
-//fill(0);
-//arc(x1, y1, 150*heartR, 300*heartR,0-QUARTER_PI,(PI-QUARTER_PI),CHORD)
-
-//arc(x1, y1,300*heartR, 150*heartR,HALF_PI,7*PI/4,CHORD)
-// resetMatrix();
-
-//  angle += TWO_PI * 0.002;
-
-//  }
