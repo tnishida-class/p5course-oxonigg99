@@ -13,12 +13,12 @@ function setup() {
     total += scores[i];
   }
 
-let start=0//くり返す前は0から(どこに描画されるかはわからない)スタートさせる(繰り返し始めたstartには前のエンドが代入される)
-for (let i = 0; i < scores.length; i++) {
+  let start=0//くり返す前は0から(どこに描画されるかはわからない)スタートさせる(繰り返し始めたstartには前のエンドが代入される)
+  for (let i = 0; i < scores.length; i++) {
 
- let R =width*0.7;
- let end =start+(scores[i]*TWO_PI)/total ;
- arc(200,200,R,R,start,end,PIE);
- start=end;
+    let R =width*0.7;
+    let end =start+(scores[i]*TWO_PI)/total ;
+    arc(200,200,R,R,start,end,PIE);
+    start=end;
   }
 }
